@@ -1,0 +1,78 @@
+# ============================================
+# Seckill System - Application Configuration
+# ============================================
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: seckill-system
+
+  # MySQL Datasource
+  datasource:
+    url: jdbc:mysql://localhost:3306/seckill_db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      pool-name: SeckillHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+
+  # Redis
+  redis:
+    host: localhost
+    port: 6379
+#    password: 123456
+    database: 0
+    timeout: 3000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
+
+  # RabbitMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    # Message send confirmation
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    listener:
+      simple:
+        # Manual acknowledgment mode
+        acknowledge-mode: manual
+        # Concurrent consumers
+        concurrency: 5
+        # Max concurrent consumers
+        max-concurrency: 10
+        # Messages per fetch
+        prefetch: 10
+
+# MyBatis
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+# TK Mapper (通用Mapper)
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+  not-empty: false
+  identity: MYSQL
+
+# Logging
+logging:
+  level:
+    com.seckill: debug
+    org.springframework: warn
+    org.springframework.amqp: warn
