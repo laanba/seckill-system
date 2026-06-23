@@ -1,6 +1,6 @@
 package com.seckill.api.mapper;
 
-import com.seckill.api.entity.User;
+import entity.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import tk.mybatis.mapper.common.Mapper;

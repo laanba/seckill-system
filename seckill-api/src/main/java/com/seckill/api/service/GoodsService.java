@@ -1,7 +1,7 @@
 package com.seckill.api.service;
 
-import com.seckill.api.dto.GoodsDTO;
-import com.seckill.api.entity.Goods;
+import dto.GoodsDTO;
+import entity.Goods;
 
 import java.util.List;
 

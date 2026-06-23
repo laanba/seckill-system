@@ -1,6 +1,6 @@
-package com.seckill.api.exception;
+package exception;
 
-import com.seckill.api.constant.SeckillConstant;
+import constant.SeckillConstant;
 import lombok.Getter;
 
 /**

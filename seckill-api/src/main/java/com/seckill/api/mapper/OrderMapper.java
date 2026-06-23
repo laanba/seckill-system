@@ -1,6 +1,6 @@
 package com.seckill.api.mapper;
 
-import com.seckill.api.entity.Order;
+import entity.Order;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;

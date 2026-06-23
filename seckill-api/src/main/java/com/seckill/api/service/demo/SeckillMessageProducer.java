@@ -1,7 +1,7 @@
 package com.seckill.api.service.demo;
 
-import com.seckill.api.constant.SeckillConstant;
-import com.seckill.api.dto.Message;
+import constant.SeckillConstant;
+import dto.Message;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

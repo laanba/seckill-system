@@ -1,4 +1,4 @@
-package com.seckill.api.dto;
+package dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

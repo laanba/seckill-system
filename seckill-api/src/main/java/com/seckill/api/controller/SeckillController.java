@@ -1,8 +1,8 @@
 package com.seckill.api.controller;
 
-import com.seckill.api.dto.Request;
-import com.seckill.api.dto.Response;
-import com.seckill.api.result.Result;
+import dto.Request;
+import dto.Response;
+import result.Result;
 import com.seckill.api.service.SeckillService;
 import com.seckill.api.service.UserService;
 import lombok.RequiredArgsConstructor;

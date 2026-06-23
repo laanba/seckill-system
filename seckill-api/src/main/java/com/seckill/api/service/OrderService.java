@@ -1,6 +1,6 @@
 package com.seckill.api.service;
 
-import com.seckill.api.dto.OrderDTO;
+import dto.OrderDTO;
 
 import java.util.List;
 

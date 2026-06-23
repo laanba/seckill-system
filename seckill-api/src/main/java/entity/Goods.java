@@ -1,4 +1,4 @@
-package com.seckill.api.entity;
+package entity;
 
 import lombok.Data;
 import javax.persistence.Id;

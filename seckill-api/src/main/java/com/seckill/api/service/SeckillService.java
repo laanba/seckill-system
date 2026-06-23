@@ -1,6 +1,6 @@
 package com.seckill.api.service;
 
-import com.seckill.api.dto.Response;
+import dto.Response;
 
 
 public interface SeckillService {

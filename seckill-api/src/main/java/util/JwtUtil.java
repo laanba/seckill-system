@@ -1,4 +1,4 @@
-package com.seckill.api.util;
+package util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,9 +1,9 @@
 package com.seckill.api.service.Serviceimpl;
 
-import com.seckill.api.dto.GoodsDTO;
-import com.seckill.api.entity.Goods;
+import dto.GoodsDTO;
+import entity.Goods;
 import com.seckill.api.mapper.GoodsMapper;
-import com.seckill.api.constant.SeckillConstant;
+import constant.SeckillConstant;
 import com.seckill.api.service.GoodsService;
 import com.seckill.api.service.demo.RedisStockService;
 import lombok.RequiredArgsConstructor;

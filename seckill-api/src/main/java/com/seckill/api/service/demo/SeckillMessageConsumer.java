@@ -1,13 +1,13 @@
 package com.seckill.api.service.demo;
 
 import com.rabbitmq.client.Channel;
-import com.seckill.api.constant.SeckillConstant;
-import com.seckill.api.dto.Message;
-import com.seckill.api.entity.Goods;
-import com.seckill.api.entity.Order;
+import constant.SeckillConstant;
+import dto.Message;
+import entity.Goods;
+import entity.Order;
 import com.seckill.api.mapper.GoodsMapper;
 import com.seckill.api.mapper.OrderMapper;
-import com.seckill.api.exception.SeckillException;
+import exception.SeckillException;
 import com.seckill.api.service.Serviceimpl.UserOrderCheckService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

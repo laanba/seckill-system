@@ -1,8 +1,8 @@
 package com.seckill.api.controller;
 
-import com.seckill.api.dto.GoodsDTO;
+import dto.GoodsDTO;
 import com.seckill.api.service.GoodsService;
-import com.seckill.api.result.Result;
+import result.Result;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

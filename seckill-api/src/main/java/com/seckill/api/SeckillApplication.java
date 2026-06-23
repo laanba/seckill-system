@@ -1,14 +1,10 @@
 package com.seckill.api;
 
 
-import com.sun.glass.ui.Application;
-import org.reactivestreams.Publisher;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.beans.factory.support.DefaultSingletonBeanRegistry;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -22,6 +18,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  */
 @SpringBootApplication
 @EnableScheduling
+@ComponentScan(basePackages = {"com.seckill", "config", "constant", "dto", "entity", "exception"})
 @MapperScan("com.seckill.api.mapper")
 public class SeckillApplication {
 

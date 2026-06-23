@@ -1,11 +1,11 @@
 package com.seckill.api.service.Serviceimpl;
 
-import com.seckill.api.dto.OrderDTO;
-import com.seckill.api.entity.Order;
+import dto.OrderDTO;
+import entity.Order;
 import com.seckill.api.mapper.GoodsMapper;
 import com.seckill.api.mapper.OrderMapper;
-import com.seckill.api.constant.SeckillConstant;
-import com.seckill.api.exception.SeckillException;
+import constant.SeckillConstant;
+import exception.SeckillException;
 import com.seckill.api.service.OrderService;
 import com.seckill.api.service.SeckillService;
 import lombok.RequiredArgsConstructor;

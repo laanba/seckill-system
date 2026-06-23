@@ -1,9 +1,9 @@
 package com.seckill.api.controller;
 
-import com.seckill.api.dto.LoginRequest;
-import com.seckill.api.dto.LoginResponse;
-import com.seckill.api.entity.User;
-import com.seckill.api.result.Result;
+import dto.LoginRequest;
+import dto.LoginResponse;
+import entity.User;
+import result.Result;
 import com.seckill.api.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,8 +1,8 @@
 package com.seckill.api.controller;
 
-import com.seckill.api.dto.OrderDTO;
+import dto.OrderDTO;
 import com.seckill.api.service.OrderService;
-import com.seckill.api.result.Result;
+import result.Result;
 import com.seckill.api.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

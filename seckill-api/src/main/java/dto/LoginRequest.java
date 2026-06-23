@@ -1,4 +1,4 @@
-package com.seckill.api.dto;
+package dto;
 
 import lombok.Data;
 import javax.validation.constraints.NotBlank;

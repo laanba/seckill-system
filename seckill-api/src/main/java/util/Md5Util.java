@@ -1,4 +1,4 @@
-package com.seckill.api.util;
+package util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

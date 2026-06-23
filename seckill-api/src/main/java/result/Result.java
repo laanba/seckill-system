@@ -1,4 +1,4 @@
-package com.seckill.api.result;
+package result;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

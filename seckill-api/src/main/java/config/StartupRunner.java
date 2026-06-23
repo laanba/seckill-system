@@ -1,4 +1,4 @@
-package com.seckill.api.config;
+package config;
 
 import com.seckill.api.service.Serviceimpl.GoodsServiceImpl;
 import lombok.RequiredArgsConstructor;

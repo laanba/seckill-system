@@ -1,4 +1,4 @@
-package com.seckill.api.constant;
+package constant;
 
 /**
  * Seckill System Constants

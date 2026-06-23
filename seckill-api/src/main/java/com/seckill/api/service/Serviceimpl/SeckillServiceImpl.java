@@ -1,17 +1,17 @@
 package com.seckill.api.service.Serviceimpl;
 
-import com.seckill.api.dto.Message;
-import com.seckill.api.dto.Response;
-import com.seckill.api.entity.Goods;
+import dto.Message;
+import dto.Response;
+import entity.Goods;
 import com.seckill.api.mapper.GoodsMapper;
 import com.seckill.api.mapper.OrderMapper;
-import com.seckill.api.constant.SeckillConstant;
-import com.seckill.api.exception.SeckillException;
+import constant.SeckillConstant;
+import exception.SeckillException;
 import com.seckill.api.service.demo.DistributedLockService;
 import com.seckill.api.service.demo.RateLimitService;
 import com.seckill.api.service.demo.RedisStockService;
 import com.seckill.api.service.demo.SeckillMessageProducer;
-import com.seckill.api.util.OrderNoGenerator;
+import util.OrderNoGenerator;
 import com.seckill.api.service.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

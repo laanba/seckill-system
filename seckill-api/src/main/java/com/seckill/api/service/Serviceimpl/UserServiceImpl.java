@@ -1,13 +1,13 @@
 package com.seckill.api.service.Serviceimpl;
 
-import com.seckill.api.dto.LoginRequest;
-import com.seckill.api.dto.LoginResponse;
-import com.seckill.api.entity.User;
+import dto.LoginRequest;
+import dto.LoginResponse;
+import entity.User;
 import com.seckill.api.mapper.UserMapper;
-import com.seckill.api.exception.SeckillException;
+import exception.SeckillException;
 import com.seckill.api.service.UserService;
-import com.seckill.api.util.JwtUtil;
-import com.seckill.api.util.Md5Util;
+import util.JwtUtil;
+import util.Md5Util;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

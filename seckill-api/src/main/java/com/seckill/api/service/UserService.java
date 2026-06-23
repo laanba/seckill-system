@@ -1,8 +1,8 @@
 package com.seckill.api.service;
 
-import com.seckill.api.dto.LoginRequest;
-import com.seckill.api.dto.LoginResponse;
-import com.seckill.api.entity.User;
+import dto.LoginRequest;
+import dto.LoginResponse;
+import entity.User;
 
 public interface UserService {
     public LoginResponse login(LoginRequest request);
