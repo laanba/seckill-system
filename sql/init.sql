@@ -79,7 +79,7 @@ CREATE TABLE seckill_user (
 INSERT INTO seckill_user (username, password, phone, email) VALUES
 ('test001', 'e10adc3949ba59abbe56e057f20f883e', '13800138000', 'test001@seckill.com'),
 ('test002', 'e10adc3949ba59abbe56e057f20f883e', '13800138001', 'test002@seckill.com'),
-('admin', 'e10adc3949ba59abbe56e057f20f883e', '13900139000', 'admin@seckill.com');
+('admin', '12345', '13900139000', 'admin@seckill.com');
 
 -- Insert test seckill goods
 INSERT INTO seckill_goods (goods_name, goods_desc, goods_picture, original_price, seckill_price, stock, total_stock, start_time, end_time, status) VALUES

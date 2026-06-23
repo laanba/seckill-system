@@ -3,8 +3,11 @@ package util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.crypto.SecretKey;
+import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +18,9 @@ import java.util.Map;
 @Slf4j
 public class JwtUtil {
 
-    private static final String SECRET = "seckillSecretKey2024ForJWTTokenGeneration";
+    // HS512 requires key size >= 512 bits (64 bytes), Base64-encoded
+    private static final String SECRET_BASE64 = "Ocr4iVbAHZiI0rwSwx5TYwBeIK54TY47E1vgU+O/hUeMjbJRE01K14yzwkt+58JggPxIKA9sTUxfUTuXBEk5NQ==";
+    private static final SecretKey SECRET_KEY = Keys.hmacShaKeyFor(Base64.getDecoder().decode(SECRET_BASE64));
     private static final long EXPIRATION = 86400000L; // 24 hours
 
     /**
@@ -25,13 +30,13 @@ public class JwtUtil {
         Map<String, Object> claims = new HashMap<>();
         claims.put("userId", userId);
         claims.put("username", username);
-        
+
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(username)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION))
-                .signWith(SignatureAlgorithm.HS512, SECRET)
+                .signWith(SECRET_KEY)
                 .compact();
     }
 
@@ -40,8 +45,9 @@ public class JwtUtil {
      */
     public static Claims parseToken(String token) {
         try {
-            return Jwts.parser()
-                    .setSigningKey(SECRET)
+            return Jwts.parserBuilder()
+                    .setSigningKey(SECRET_KEY)
+                    .build()
                     .parseClaimsJws(token)
                     .getBody();
         } catch (Exception e) {
