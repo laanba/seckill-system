@@ -43,19 +43,19 @@ spring:
     username: guest
     password: guest
     virtual-host: /
-#    # Message send confirmation
-#    publisher-confirm-type: correlated
-#    publisher-returns: true
-#    listener:
-#      simple:
-#        # Manual acknowledgment mode
-#        acknowledge-mode: manual
-#        # Concurrent consumers
-#        concurrency: 5
-#        # Max concurrent consumers
-#        max-concurrency: 10
-#        # Messages per fetch
-#        prefetch: 250
+    # Message send confirmation
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    listener:
+      simple:
+        # Manual acknowledgment mode — 手动确认，与 Consumer 中 basicAck/basicNack 配合
+        acknowledge-mode: manual
+        # Concurrent consumers
+        concurrency: 5
+        # Max concurrent consumers
+        max-concurrency: 10
+        # Messages per fetch
+        prefetch: 250
 
 # MyBatis
 mybatis:

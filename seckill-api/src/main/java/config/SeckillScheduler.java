@@ -24,7 +24,7 @@ public class SeckillScheduler {
      * Update goods status every 30 seconds
      * Changes: Coming Soon -> Ongoing -> Ended
      */
-    @Scheduled(fixedRate = 30000)
+    @Scheduled(fixedRate = 300000)
     public void updateGoodsStatus() {
         try {
             goodsService.updateGoodsStatus();

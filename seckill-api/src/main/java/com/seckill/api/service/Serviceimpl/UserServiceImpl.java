@@ -35,8 +35,8 @@ public class UserServiceImpl implements UserService {
         }
 
         // Verify password
-//        String encryptedPassword = Md5Util.encrypt(request.getPassword());
-        if (!request.getPassword().equals(user.getPassword())) {
+        String encryptedPassword = Md5Util.encrypt(request.getPassword());
+        if (!encryptedPassword.equals(user.getPassword())) {
             log.warn("Login failed: wrong password, username={}", request.getUsername());
             throw SeckillException.loginFailed();
         }
