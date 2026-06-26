@@ -57,4 +57,6 @@ public interface GoodsMapper extends Mapper<Goods> {
     int updateStatusByCondition(@Param("oldStatus") Integer oldStatus, 
                                  @Param("newStatus") Integer newStatus,
                                  @Param("currentTime") String currentTime);
+    @Update("UPDATE seckill_goods SET status = 1  ")
+    int updateStatusByID();
 }

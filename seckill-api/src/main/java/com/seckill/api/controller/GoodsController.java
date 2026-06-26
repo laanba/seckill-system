@@ -21,7 +21,7 @@ public class GoodsController {
     private final GoodsService goodsService;
 
     /**
-     * Get all goods
+     * 获取所有货品
      */
     @GetMapping("/list")
     public Result<List<GoodsDTO>> getAllGoods() {
@@ -30,7 +30,7 @@ public class GoodsController {
     }
 
     /**
-     * Get ongoing seckill goods
+     * 获取所有即将来临的货品
      */
     @GetMapping("/ongoing")
     public Result<List<GoodsDTO>> getOngoingGoods() {
@@ -39,7 +39,7 @@ public class GoodsController {
     }
 
     /**
-     * Get coming soon seckill goods
+     * 获取马上来临的货品
      */
     @GetMapping("/coming-soon")
     public Result<List<GoodsDTO>> getComingSoonGoods() {
@@ -48,7 +48,7 @@ public class GoodsController {
     }
 
     /**
-     * Get goods detail
+     * 获取商品详情
      */
     @GetMapping("/{goodsId}")
     public Result<GoodsDTO> getGoodsDetail(@PathVariable Long goodsId) {

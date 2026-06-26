@@ -33,7 +33,7 @@ public class OrderServiceImpl implements OrderService {
      * Get order by order number
      */
     @Override
-    public OrderDTO getOrderByOrderNo(String orderNo) {
+    public OrderDTO    getOrderByOrderNo(String orderNo) {
         Order order = orderMapper.findByOrderNo(orderNo);
         if (order == null) {
             return null;

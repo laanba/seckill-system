@@ -48,15 +48,15 @@ public class RateLimitService {
         long windowStart = now - windowSeconds * 1000;//通过当前时间减去窗口时间，得到windowsatrt，在此之前的请求都要清除
 
         String script =
-                "redis.call('ZREMRANGEBYSCORE',KEYS[1],0,ARGV[1])" +
-                        "local count = redis.call('ZCARD',KEYS[1])"+
-                        "if(count>=tonumber(ARGV[2]) then"+
-                        "return 0"+
-                        "else"+
-                        "redis.call('ZADD',KEYS[1],ARGV[3],ARGV[3])"+
-                        "redis.call('EXPIRE',KEYS[1],ARGV[4])"+
-                        "return 1"+
-                        "end";
+                "redis.call('ZREMRANGEBYSCORE', KEYS[1], 0, ARGV[1]) \n" +
+                "local count = redis.call('ZCARD', KEYS[1]) \n" +
+                "if count >= tonumber(ARGV[2]) then \n" +
+                "    return 0 \n" +
+                "else \n" +
+                "    redis.call('ZADD', KEYS[1], ARGV[3], ARGV[3]) \n" +
+                "    redis.call('EXPIRE', KEYS[1], ARGV[4]) \n" +
+                "    return 1 \n" +
+                "end";
 
         try{
             Long result = redisTemplate.execute(

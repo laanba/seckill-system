@@ -65,10 +65,13 @@ public class JwtUtil {
             return null;
         }
         Object userId = claims.get("userId");
-        if (userId instanceof Integer) {
-            return ((Integer) userId).longValue();
+        //由于claims是hash<String ,Object>结构，所以取出来是Object对象
+        if (userId instanceof Number) {
+            return ((Number) userId).longValue();
         }
-        return (Long) userId;
+        //这里需要强转是因为从前端获取的token是json格式，反序列化后得到的有可能是Long型（大数值）也可能是Integer（小数值）
+        //使用Number可以优雅地吸收两个子类,统一转换成Long
+        return null;
     }
 
     /**
@@ -84,10 +87,12 @@ public class JwtUtil {
      */
     public static boolean isTokenExpired(String token) {
         Claims claims = parseToken(token);
+        //用clain来装token的三部分信息，借此来抓取过期时间
         if (claims == null) {
             return true;
         }
         return claims.getExpiration().before(new Date());
+        //比较过期时间和当前时间，来判断是否过期
     }
 
     /**

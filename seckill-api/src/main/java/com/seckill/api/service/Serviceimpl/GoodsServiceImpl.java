@@ -62,7 +62,7 @@ public class GoodsServiceImpl implements GoodsService {
      */
     @Override
     public List<GoodsDTO> getOngoingGoods() {
-        List<Goods> goodsList = goodsMapper.findOngoingGoods();
+        List<Goods> goodsList = goodsMapper.findByStatus(2);
         return goodsList.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
